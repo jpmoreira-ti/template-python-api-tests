@@ -8,13 +8,7 @@ on:
     branches:
       - main
   schedule:
-      - cron: '0 18 * * *'    
-
-permissions:
-  contents: read
-  issues: read
-  checks: write
-  pull-requests: write
+      - cron: '0 18 * * *'
 
 jobs:
   test:
