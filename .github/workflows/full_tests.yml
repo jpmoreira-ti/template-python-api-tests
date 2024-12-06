@@ -36,7 +36,7 @@ jobs:
 
     - name: Run Robot Framework tests
       run: |
-        robot --outputdir output tests/
+        robot --outputdir output tests/  
 
     - name: Upload Test Artifacts
       uses: actions/upload-artifact@v4
@@ -48,4 +48,11 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: robot-framework-results
-        path: output/    
+        path: output/
+        
+    - name: Send report to commit
+      uses: joonvena/robotframework-reporter-action@v2.5
+      with:
+        gh_access_token: ${{ secrets.GITHUB_TOKEN }}
+        failed_tests_on_top: true
+        summary: true     
