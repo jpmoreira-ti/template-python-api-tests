@@ -1,15 +1,15 @@
-# Nome do Projeto
-Template de testes de api com [Robot framework](https://robotframework.org/)
+# Project Name
+API test template with [Robot framework](https://robotframework.org/). The API used in this project is from [FakeStoreAPI](https://fakestoreapi.com/docs).
 
-## Instalação
-Para instalar as dependências do projeto, execute o seguinte comando:
+## Installation
+To install the project dependencies, run the following command:
 
 ```sh
-pip3 install -r requirements.txt
+pip3 install -r 
 ```
 
-## Execução
-Para executar os testes, execute o seguinte comando:
+## Execution
+To run the tests, execute the following command:
 
 ```sh
 robot -d report tests
