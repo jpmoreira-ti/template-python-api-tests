@@ -22,7 +22,7 @@ When I send a GET request to /products
     ...            url=/products
     ...            expected_status=any
 
-    [Return]    ${response}  
+    RETURN    ${response}  
 
 When I send a GET request to /products/id
     [Arguments]  ${id}
@@ -33,7 +33,7 @@ When I send a GET request to /products/id
     ...            url=/products/${id}
     ...            expected_status=any
 
-    [Return]    ${response}
+    RETURN    ${response}
 
 When I send a POST request to /products
     Create fakestore session
@@ -47,7 +47,7 @@ When I send a POST request to /products
     ...            expected_status=any
     ...            json=${body}   
 
-    [Return]    ${response}            
+    RETURN    ${response}            
 
 When I send a DELETE request to /products/id
     [Arguments]  ${id}
@@ -58,4 +58,4 @@ When I send a DELETE request to /products/id
     ...            url=/products/${id}
     ...            expected_status=any
 
-    [Return]    ${response}
+    RETURN    ${response}

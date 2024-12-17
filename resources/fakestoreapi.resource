@@ -7,21 +7,21 @@ Resource   ../services/fakestoreapi_service.resource
 *** Keywords ***
 When I send a request get to /products
     ${response}   When I send a GET request to /products
-    [Return]      ${response}
+    RETURN      ${response}
 
 When I send a request to get /products/id
     [Arguments]    ${id}
     ${response}   When I send a GET request to /products/id   ${id}  
-    [Return]      ${response}    
+    RETURN      ${response}    
 
 When I send a request post to /products
     ${response}   When I send a POST request to /products   
-    [Return]      ${response}
+    RETURN      ${response}
 
 When I send a request delete to /products/id
     [Arguments]    ${id}
     ${response}   When I send a DELETE request to /products/id  ${id}
-    [Return]      ${response}        
+    RETURN      ${response}        
 
 Then the response status code should be 
     [Arguments]    ${status_code}   ${response}
